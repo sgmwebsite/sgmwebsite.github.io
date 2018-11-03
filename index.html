@@ -23,6 +23,39 @@
 <link rel="stylesheet" href="/css/creative.css" type="text/css">
 <link rel="stylesheet" href="/css/modals.css" type="text/css">
 
+<script src="preact.with.libs.js"></script>
+<script src="mfunnel_preact.js"></script>
+<script>
+  // const minintesFromNow = (n) => new Date().getTime() + n*60*1000
+  // function send_voucher_email(state, model) {
+  //   state.sendEmail(model.email, 'Your Voucher', `
+  //     Thank you, ${model.name}!
+
+  //     Here is your voucher....
+  //   `.replace("\n", "<br/>"))
+  // }
+   go({
+    gappid: "AKfycbwUplG2Z28WPS01nth_3Jv0Cf4l7Ma-NBMo3ImnZJljbRxDA9M0",
+    sheetid: "13hTWn1IK4P4kPuRsKDVG_d0QsTiyRFhFbJOX97g4ZeY",
+    fbpixel: "420141798494687",
+    business: "SGM",
+    logo: "./logo.png",
+    page: "home",
+    disclaimer: "",
+    privacy: "",
+    terms: "",
+    popup: false,
+    // start: new Date().getTime(),
+    // end: minintesFromNow(15),
+    col: ["center", "center"],
+    rw: [7,9,11], //reponsive width
+    bg: "white", //background
+    ta: "center", //text alignment
+    maxw: "1000px"
+    
+  }, template_centered_with_footer)
+</script>
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -223,7 +256,7 @@
                 
                 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
+                    <p>(831) 708-9406</p>
                 </div>
             
             
@@ -238,6 +271,20 @@
             
         </div>
     </div>
+    <markdown>
+    <page pageid=home>
+      <submit asl=1s c=black bg=white onsubmit="{ (m)=>{console.log(m); state.save(m); } }" goto=ty >
+        # Contact Form
+        <iname></iname>
+        <iphone></iphone>
+        <iemail></iemail>
+        <isubmit>Get In Touch</isubmit>
+      </submit>
+    </page>
+    <page aexp="1s" pageid=ty>
+      # We will be in touch shortly.
+    </page>
+  </markdown>
 </section>
 
         
